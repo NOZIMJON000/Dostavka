@@ -1,0 +1,33 @@
+{%extends 'base.html' %}
+
+{%block content %}
+ <!-- menu -->
+<br>
+<br>
+        <section class="menu ptb-80" id="menu">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Menu</h3>
+                    <h2>Popular Dishes </h2>
+                    <p>Sed tincidunt sapien in augue aliquet ultricies. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Quisque blandit tortor nunc, in consectetur justo pharetra vel. </p>
+                </div>
+                <div class="menu-items d-grid">
+                {% for i in foodlist%}
+
+                    <div class="item">
+                        <img  style="width:366px; height:360px;" src="{{ url_for('static' , filename='media-files/'+i[2])}}" alt="{{i[1]}}" class="img-fluid">
+                        <div class="item-content">
+                            <h4>{{i[1]}}</h4>
+                            <p><b>{{i[1]}}</b> turlarini bilish uchun <b>KO'RISH</b> tugmasini bosish orqali batafsil bilib olishingiz mumkin</p>
+                            <div class="action d-flex">
+                                <a style="align-items: center;" href="{{url_for('menudetail' , id=i[0] , nomi=i[1]) }}" class="cart-btn">KO'RISH</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+              </div>
+            </div>
+        </section>
+
+{%endblock%}

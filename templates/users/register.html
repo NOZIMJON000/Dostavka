@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="login">
+    <div class="container">
+        <form method="post">
+           <label>Ism</label>
+            <input name="ism" type="text" required>
+
+            <label>familiya</label>
+            <input name="familiya" type="text" required>
+
+            <label>login</label>
+            <input name="login" type="text" required>
+
+            <label>password</label>
+            <input name="pasword" type="password" required>
+
+            <button type="submit" class="btn"> ro'yxatdan o'tish </button>
+
+        </form>
+                 <p>Agar ro'yxatdan o'tgan bo'lsangiz <a href="{{url_for('login')}}">login</a></p>
+    </div>
+</div>
+
+{% endblock %}

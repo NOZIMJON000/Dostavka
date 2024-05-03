@@ -1,0 +1,49 @@
+/* savatcha.css */
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table header styling */
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Table cell styling */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Alternate row background color */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Image styling */
+img {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+}

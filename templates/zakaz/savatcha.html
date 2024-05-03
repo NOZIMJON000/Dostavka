@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/savatcha.css' )}}">
+</head>
+<body>
+<h1>Savatcha</h1>
+<table>
+    <thead>
+        <tr>
+            <th>№</th>
+            <th>nomi</th>
+            <th>miqdori</th>
+            <th>narxi</th>
+            <th>tarifi</th>
+            <th>rasmi</th>
+            <th>soni</th>
+            <th>o'chirish</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for i in zakazlar %}
+
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{i[0]}}</td>
+        <td>{{i[4]}}</td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td> <img src="{{url_for('static' , filename='media-files/'+i[3] )}}" alt="{{i[3]}}"></td>
+        <td>{{i[5]}}</td>
+        <td><a href="{{url_for('delete_mahsulot' , id=i[6])}}"><img style=" width:60px;" src="{{ url_for('static' , filename='images/trash_3329423.png')}}" alt="Foodiee.order"></a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
